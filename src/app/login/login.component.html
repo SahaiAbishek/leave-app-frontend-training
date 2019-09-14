@@ -1,0 +1,16 @@
+<div style="text-align:center">
+    <h2>Login Screen</h2>
+    <div style="text-align:center">
+        <form>
+            <label for="employeeId">Employee ID </label>
+            <input #employeeId type="text" id="emplyeeId" placeholder="employeeId"  >
+            <br>
+            <label for="password">Password </label>
+            <input type="password" id="employeePassword" placeholder="password">
+            <br>
+            <button (click)="gotoDashboard(employeeId)">Submit</button>
+            <a>
+                <button>Cancel</button>
+            </a>
+        </form>
+    </div>
