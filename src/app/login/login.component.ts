@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgForm, FormGroup } from '@angular/forms';
+import { NgForm, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -10,13 +11,31 @@ import { NgForm, FormGroup } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
+  private employeeId: String;
+  private employeePassword: String;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private formBuilder: FormBuilder,
+    private loginService: LoginService
+  ) { }
 
   ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      emplyeeId: ['', Validators.required],
+      employeePassword: ['', Validators.required]
+    });
   }
 
-  public gotoDashboard(employeeId) {
-    this.router.navigate(['dashboard', employeeId.value]);
+  submitForm(): void {
+    if (this.loginForm.invalid) {
+      return;
+    }
+    this.loginService.setEmployeeId(this.loginForm.get('emplyeeId').value);
+    this.router.navigate(['dashboard', this.loginForm.get('emplyeeId').value], {
+      state: {
+        emplyeeId:
+          this.employeeId
+      }
+    });
   }
 }

@@ -1,16 +1,17 @@
 <div style="text-align:center">
     <h2>Login Screen</h2>
     <div style="text-align:center">
-        <form>
+        <form (ngSubmit)="submitForm()" [formGroup]="loginForm" novalidate>
             <label for="employeeId">Employee ID </label>
-            <input #employeeId type="text" id="emplyeeId" placeholder="employeeId"  >
+            <input type="text" formControlName="emplyeeId" id="emplyeeId" placeholder="employeeId">
             <br>
             <label for="password">Password </label>
-            <input type="password" id="employeePassword" placeholder="password">
+            <input type="password" formControlName="employeePassword" id="employeePassword" placeholder="password">
             <br>
-            <button (click)="gotoDashboard(employeeId)">Submit</button>
+            <input type="submit" name="submit" value="submit">
             <a>
                 <button>Cancel</button>
             </a>
         </form>
     </div>
+</div>
