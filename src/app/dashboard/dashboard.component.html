@@ -6,8 +6,10 @@
             <div class="card border-primary mb-3" style="max-width: 100rem;">
                 <div class="card-header">My Details Section</div>
                 <div class="card-body">
-                    <h4 class="card-title">{{employeeId}} Details</h4>
-                    <p class="card-text">Data to be decided later.</p>
+                    <a [routerLink]="['/employee',employeeId]">
+                        <h4 class="card-title">My Details</h4>
+                    </a>
+                    
                 </div>
             </div>
         </div>

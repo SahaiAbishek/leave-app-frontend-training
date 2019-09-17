@@ -1,0 +1,55 @@
+<div [formGroup]="empDetailsForm">
+    <h1> My Details Section{{employee.empEmail}}</h1>
+    <div class="row">
+        <div class="col-sm-2">
+            <label for="employeeId">Employee Id</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" formControlName="emplyeeId" id="emplyeeId" value={{employee.empId}}>
+        </div>
+        <div class="col-sm-2">
+            <label for="doj">Date Joined</label>
+        </div>
+        <div class="col-sm-4">
+            <input type="text" formControlName="doj" id="doj" value={{employee.empDoj}}>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label for="fullName">Full Name</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" formControlName="fullName" id="fullName" value={{employee.empName}}>
+        </div>
+        <div class="col-sm-2">
+            <label for="department">Department</label>
+        </div>
+        <div class="col-sm-4">
+            <input type="text" formControlName="department" id="department" value={{employee.empDept}}>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label for="email">Email</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" formControlName="email" id="email" value={{employee.empEmail}}>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label for="phone">Phone Number</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" formControlName="phone" id="phone" value={{employee.phone}}>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label for="leaveBalance">Avaliable Leave Balance</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" formControlName="leaveBalance" id="leaveBalance" value={{employee.leaveBalance}}>
+        </div>
+    </div>
+</div>

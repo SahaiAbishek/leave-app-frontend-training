@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LoginService {
-  employeeId: string;
+  employeeId: number;
 
   constructor() { }
 
@@ -12,7 +12,7 @@ export class LoginService {
     return this.employeeId;
   }
   
-  setEmployeeId(employeeId: string) {
+  setEmployeeId(employeeId: number) {
     this.employeeId = employeeId;
   }
 }
