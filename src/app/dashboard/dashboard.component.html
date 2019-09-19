@@ -6,10 +6,9 @@
             <div class="card border-primary mb-3" style="max-width: 100rem;">
                 <div class="card-header">My Details Section</div>
                 <div class="card-body">
-                    <a [routerLink]="['/employee',employeeId]">
-                        <h4 class="card-title">My Details</h4>
-                    </a>
-                    
+                    <button type="button" class="btn btn-link" (click)=myDetails()>
+                        My Details
+                    </button>
                 </div>
             </div>
         </div>
@@ -17,8 +16,9 @@
             <div class="card border-primary mb-3" style="max-width: 100rem;">
                 <div class="card-header">My Manager Details Section</div>
                 <div class="card-body">
-                    <h4 class="card-title">Manager Details</h4>
-                    <p class="card-text">contents to Be dicided.</p>
+                    <button type="button" class="btn btn-link" (click)=managerDetails()>
+                        Manager Details
+                    </button>
                 </div>
             </div>
         </div>
@@ -28,8 +28,9 @@
             <div class="card border-primary mb-3" style="max-width: 100rem;">
                 <div class="card-header">My Leave Applications section</div>
                 <div class="card-body">
-                    <h4 class="card-title">Leaves</h4>
-                    <p class="card-text">Contents TODO.</p>
+                        <button type="button" class="btn btn-link" (click)=myLeaves()>
+                                My Leaves
+                            </button>
                 </div>
             </div>
         </div>

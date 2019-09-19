@@ -9,13 +9,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { ManagerDetailsComponent } from './manager-details/manager-details.component';
+import { LeavesAppicationComponent } from './leaves-appication/leaves-appication.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    ManagerDetailsComponent,
+    LeavesAppicationComponent
   ],
   imports: [
     BrowserModule,

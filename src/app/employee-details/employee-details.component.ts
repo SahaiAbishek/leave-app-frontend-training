@@ -32,12 +32,10 @@ export class EmployeeDetailsComponent implements OnInit {
       phone: ['', Validators.required],
       leaveBalance: ['', Validators.required]
     });
+    this.employeeId =this.employee.empId;
+    this.employee = this.loginService.getEmployeeDetails();
 
-    this.employeeId = this.loginService.getEmployeeId();
-
-    this.service.getEmployeeDetails(this.loginService.getEmployeeId()).subscribe(data =>
-      this.employee = data
-    );
   }
+
 
 }

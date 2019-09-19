@@ -1,3 +1,5 @@
+import { Leaves } from './Leaves';
+
 export class Employee {
 
     empId: number
@@ -7,5 +9,6 @@ export class Employee {
     empEmail: string;
     empDoj: string;
     leaveBalance: number;
-    empManagerId: number
+    empManagerId: number;
+    leaves: [Leaves];
 }

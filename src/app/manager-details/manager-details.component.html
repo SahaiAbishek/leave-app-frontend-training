@@ -1,0 +1,35 @@
+<div [formGroup]="empDetailsForm">
+        <h1> Manager Details Section</h1>
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="employeeId">Employee Id</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" formControlName="emplyeeId" id="emplyeeId" value={{employee.empId}}>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="fullName">Full Name</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" formControlName="fullName" id="fullName" value={{employee.empName}}>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="email">Email</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" formControlName="email" id="email" value={{employee.empEmail}}>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="phone">Phone Number</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" formControlName="phone" id="phone" value={{employee.phone}}>
+            </div>
+        </div>
+    </div>
