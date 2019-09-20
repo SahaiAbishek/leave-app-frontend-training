@@ -14,4 +14,8 @@ export class CommonServiceService {
   getEmployeeDetails(employeeId: number) {
     return this.http.get<Employee>(`${this.baseURL}/employeeId/${employeeId}`);
   }
+
+  getReportees(employeeId: number) {
+    return this.http.get<Employee[]>(`${this.baseURL}/reportees/${employeeId}`);
+  }
 }

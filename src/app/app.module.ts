@@ -11,6 +11,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ManagerDetailsComponent } from './manager-details/manager-details.component';
 import { LeavesAppicationComponent } from './leaves-appication/leaves-appication.component';
+import { ReporteesComponent } from './reportees/reportees.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LeavesAppicationComponent } from './leaves-appication/leaves-appication
     DashboardComponent,
     EmployeeDetailsComponent,
     ManagerDetailsComponent,
-    LeavesAppicationComponent
+    LeavesAppicationComponent,
+    ReporteesComponent
   ],
   imports: [
     BrowserModule,

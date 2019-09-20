@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
     this.service.getEmployeeDetails(this.loginService.getEmployeeId()).subscribe(data =>
       this.employee = data
     );
-    
+
   }
 
   managerDetails() {
@@ -42,6 +42,11 @@ export class DashboardComponent implements OnInit {
   myLeaves() {
     this.loginService.setEmployeeDetails(this.employee);
     this.router.navigate(['/leaves']);
+  }
+
+  myReportees() {
+    this.loginService.setEmployeeDetails(this.employee);
+    this.router.navigate(['/reportees']);
   }
 
 }
