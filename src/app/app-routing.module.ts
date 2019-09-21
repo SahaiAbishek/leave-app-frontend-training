@@ -7,6 +7,8 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { ManagerDetailsComponent } from './manager-details/manager-details.component';
 import { LeavesAppicationComponent } from './leaves-appication/leaves-appication.component';
 import { ReporteesComponent } from './reportees/reportees.component';
+import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
+import { ApproveLeaveComponent } from './approve-leave/approve-leave.component';
 
 
 const routes: Routes = [
@@ -16,7 +18,9 @@ const routes: Routes = [
   { path: 'employee/:empId', component: EmployeeDetailsComponent },
   { path: 'manager/:empId', component: ManagerDetailsComponent },
   { path: 'leaves', component: LeavesAppicationComponent },
-  { path: 'reportees', component: ReporteesComponent }
+  { path: 'reportees', component: ReporteesComponent },
+  { path: 'applyLeave', component: ApplyLeaveComponent },
+  { path: 'approveLeave', component: ApproveLeaveComponent }
 ];
 
 @NgModule({

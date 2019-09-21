@@ -12,6 +12,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ManagerDetailsComponent } from './manager-details/manager-details.component';
 import { LeavesAppicationComponent } from './leaves-appication/leaves-appication.component';
 import { ReporteesComponent } from './reportees/reportees.component';
+import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
+import { ApproveLeaveComponent } from './approve-leave/approve-leave.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ReporteesComponent } from './reportees/reportees.component';
     EmployeeDetailsComponent,
     ManagerDetailsComponent,
     LeavesAppicationComponent,
-    ReporteesComponent
+    ReporteesComponent,
+    ApplyLeaveComponent,
+    ApproveLeaveComponent
   ],
   imports: [
     BrowserModule,

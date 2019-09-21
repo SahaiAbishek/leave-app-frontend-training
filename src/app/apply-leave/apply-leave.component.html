@@ -1,0 +1,56 @@
+<div class="container" [formGroup]="leaveDetailsForm">
+    <h1> Apply Leave</h1>
+    <div class="row">
+        <div class="col-sm-2">
+            <label for="startDate">Start Date</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" formControlName="startDate" id="startDate" placeholder="yyyy-mm-dd">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label for="endDate">End Date</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" formControlName="endDate" id="endDate" placeholder="yyyy-mm-dd">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label for="numberOfDays">Number of Days</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" formControlName="numberOfDays" id="numberOfDays" placeholder="number of days">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label for="leaveType">Leave Type</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" formControlName="leaveType" id="leaveType" placeholder="EL">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label for="leaveReason">Leave Reason</label>
+        </div>
+        <div class="col-sm-3">
+            <textarea class="form-control" formControlName="leaveReason" id="leaveReason"></textarea>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-2">
+            <button type="button"  class="btn btn-primary" (click)=myReportees()>
+               Cancel
+            </button>
+        </div>
+        <div class="col-sm-2">
+            <button type="button" class="btn btn-primary" (click)=myReportees()>
+                Apply
+            </button>
+        </div>
+    </div>
+</div>

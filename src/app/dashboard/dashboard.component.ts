@@ -11,9 +11,10 @@ import { Employee } from '../employee-details/Employee';
 })
 export class DashboardComponent implements OnInit {
 
-  employeeId
+  private employeeId;
   employee = new Employee();
-  constructor(private router: Router,
+  constructor(
+    private router: Router,
     private activatedRoute: ActivatedRoute,
     private loginService: LoginService,
     private service: CommonServiceService
@@ -21,8 +22,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    var empID = this.loginService.getEmployeeId();
-    this.employeeId = empID;
+    this.employeeId = this.loginService.getEmployeeId();
     this.service.getEmployeeDetails(this.loginService.getEmployeeId()).subscribe(data =>
       this.employee = data
     );

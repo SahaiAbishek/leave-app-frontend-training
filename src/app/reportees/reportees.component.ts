@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonServiceService } from '../common-service.service';
 import { Employee } from '../employee-details/Employee';
 import { LoginService } from '../login/login.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-reportees',
@@ -14,7 +15,8 @@ export class ReporteesComponent implements OnInit {
 
   constructor(
     private service: CommonServiceService,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -22,6 +24,10 @@ export class ReporteesComponent implements OnInit {
       // console.log(data)
       this.employees = data
     );
+  }
+
+  approveLeave(){
+    this.router.navigate(['approveLeave']);
   }
 
 }
