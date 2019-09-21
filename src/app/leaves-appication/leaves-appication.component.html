@@ -1,50 +1,52 @@
-<div>
-    <h1> My Leave Application Section</h1>
+<div class="container">
+    <div>
+        <h1> My Leave Application Section</h1>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Leave Id</th>
+                <th scope="col">Number of Days</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">end Date</th>
+                <th scope="col">Leave type</th>
+                <th scope="col">Status</th>
+                <th scope="col">Reason</th>
+                <th scope="col">Applied On</th>
+                <th scope="col">Manager Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let leave of leaves">
+                <td>
+                    {{ leave.leaveId}}
+                </td>
+                <td>
+                    {{ leave.numberOfDays}}
+                </td>
+                <td>
+                    {{ leave.startDate}}
+                </td>
+                <td>
+                    {{ leave.endDate}}
+                </td>
+                <td>
+                    {{ leave.leaveType}}
+                </td>
+                <td>
+                    {{ leave.leaveStatus}}
+                </td>
+                <td>
+                    {{ leave.reason}}
+                </td>
+                <td>
+                    {{ leave.appliedOn}}
+                </td>
+                <td>
+                    {{ leave.managerComments}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-success">Apply Leave</button>
 </div>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th scope="col">Leave Id</th>
-            <th scope="col">Number of Days</th>
-            <th scope="col">Start Date</th>
-            <th scope="col">end Date</th>
-            <th scope="col">Leave type</th>
-            <th scope="col">Status</th>
-            <th scope="col">Reason</th>
-            <th scope="col">Applied On</th>
-            <th scope="col">Manager Comments</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let leave of leaves">
-            <td>
-                {{ leave.leaveId}}
-            </td>
-            <td>
-                {{ leave.numberOfDays}}
-            </td>
-            <td>
-                {{ leave.startDate}}
-            </td>
-            <td>
-                {{ leave.endDate}}
-            </td>
-            <td>
-                {{ leave.leaveType}}
-            </td>
-            <td>
-                {{ leave.leaveStatus}}
-            </td>
-            <td>
-                {{ leave.reason}}
-            </td>
-            <td>
-                {{ leave.appliedOn}}
-            </td>
-            <td>
-                {{ leave.managerComments}}
-            </td>
-        </tr>
-    </tbody>
-</table>
-<button type="button" class="btn btn-success">Apply Leave</button>
