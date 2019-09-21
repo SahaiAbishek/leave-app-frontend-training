@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Leaves } from '../employee-details/Leaves';
 import { CommonServiceService } from '../common-service.service';
+import { LoginService } from '../login/login.service';
 
 @Component({
   selector: 'app-apply-leave',
@@ -15,7 +16,8 @@ export class ApplyLeaveComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private service: CommonServiceService
+    private service: CommonServiceService,
+    private loginService: LoginService
   ) { }
 
   ngOnInit() {
@@ -36,7 +38,7 @@ export class ApplyLeaveComponent implements OnInit {
     this.leave.reason = this.leaveDetailsForm.get('leaveReason').value;
     this.leave.leaveStatus = 'PENDING';
 
-    this.service.addLeave(1, this.leave).subscribe(data =>
+    this.service.addLeave(this.loginService.getEmployeeDetails().empId, this.leave).subscribe(data =>
       console.log('Success')
     );
   }
