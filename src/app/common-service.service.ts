@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Employee } from './employee-details/Employee';
+import { Leaves } from './employee-details/Leaves';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +18,18 @@ export class CommonServiceService {
 
   getReportees(employeeId: number) {
     return this.http.get<Employee[]>(`${this.baseURL}/reportees/${employeeId}`);
+  }
+
+  addLeave(employeeId: number, leaves: Leaves) {
+    return this.http.post(`${this.baseURL}/leaves/${employeeId}`, {
+      appliedOn: leaves.startDate,
+      endDate: leaves.endDate,
+      leaveStatus: leaves.leaveStatus,
+      leaveType: leaves.leaveType,
+      managerComments: leaves.managerComments,
+      numberOfDays: leaves.numberOfDays,
+      reason: leaves.reason,
+      startDate: leaves.startDate
+    });
   }
 }

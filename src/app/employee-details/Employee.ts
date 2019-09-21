@@ -2,7 +2,7 @@ import { Leaves } from './Leaves';
 
 export class Employee {
 
-    empId: number
+    empId: number;
     empName: string;
     phone: number;
     empDept: string;

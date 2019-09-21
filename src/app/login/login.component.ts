@@ -11,10 +11,11 @@ import { LoginService } from './login.service';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
-  private employeeId: String;
-  private employeePassword: String;
+  private employeeId: string;
+  private employeePassword: string;
 
-  constructor(private router: Router,
+  constructor(
+    private router: Router,
     private formBuilder: FormBuilder,
     private loginService: LoginService
   ) { }
