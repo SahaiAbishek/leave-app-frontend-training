@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Employee } from '../employee-details/Employee';
+import { Leaves } from '../employee-details/Leaves';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,7 @@ import { Employee } from '../employee-details/Employee';
 export class LoginService {
 
   employee = new Employee();
+  leave = new Leaves();
   employeeId: number;
   managerId: number;
 
@@ -33,5 +35,12 @@ export class LoginService {
   }
   getEmployeeDetails() {
     return this.employee;
+  }
+
+  setLeave(leave: Leaves) {
+    this.leave = leave;
+  }
+  getLeave() {
+    return this.leave;
   }
 }

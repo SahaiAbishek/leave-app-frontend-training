@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Employee } from './employee-details/Employee';
 import { Leaves } from './employee-details/Leaves';
@@ -31,5 +31,18 @@ export class CommonServiceService {
       reason: leaves.reason,
       startDate: leaves.startDate
     });
+  }
+
+  approveLeave(leaveId: number, leaveStatus: string) {
+    console.log(leaveId + '----' + leaveStatus);
+    return this.http.put(`${this.baseURL}/leave/${leaveId}`, leaveStatus).subscribe(
+      data => {
+        console.log("PUT Request is successful ", data);
+      },
+      error => {
+        console.log("Rrror", error);
+      }
+    );
+
   }
 }

@@ -3,6 +3,7 @@ import { CommonServiceService } from '../common-service.service';
 import { Employee } from '../employee-details/Employee';
 import { LoginService } from '../login/login.service';
 import { Route, Router } from '@angular/router';
+import { Leaves } from '../employee-details/Leaves';
 
 @Component({
   selector: 'app-reportees',
@@ -26,7 +27,9 @@ export class ReporteesComponent implements OnInit {
     );
   }
 
-  approveLeave(){
+  approveLeave(employee: Employee, leave: Leaves) {
+    this.loginService.setEmployeeDetails(employee);
+    this.loginService.setLeave(leave);
     this.router.navigate(['approveLeave']);
   }
 
